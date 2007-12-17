@@ -10,7 +10,6 @@ Source0: %{name}-%{version}.gem
 License: MIT
 Group: System/Servers
 Url: http://www.rubyonrails.org/
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch: noarch
 BuildRequires: ruby-RubyGems
 Requires: ruby-RubyGems
