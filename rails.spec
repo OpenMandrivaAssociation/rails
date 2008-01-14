@@ -19,6 +19,7 @@ Requires: ruby-activerecord
 Requires: ruby-actionpack
 Requires: ruby-actionmailer
 Requires: ruby-actionwebservice
+Requires: ruby-activeresource
 Requires: ruby-rake
 
 
