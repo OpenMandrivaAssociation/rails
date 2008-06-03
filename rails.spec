@@ -1,6 +1,6 @@
 %define name rails
-%define version 2.0.2
-%define release %mkrel 3
+%define version 2.1.0
+%define release %mkrel 1
 
 Summary: Web-application framework with template engine, control-flow layer, and ORM
 Name: %{name}
@@ -20,6 +20,7 @@ Requires: ruby-actionpack
 Requires: ruby-actionmailer
 Requires: ruby-actionwebservice
 Requires: ruby-activeresource
+Requires: ruby-sqlite3
 Requires: ruby-rake
 
 
