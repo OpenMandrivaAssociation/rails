@@ -1,28 +1,27 @@
-%define name rails
+%define name	rails
 %define version 2.1.2
-%define release %mkrel 1
+%define release %mkrel 2
 
-Summary: Web-application framework with template engine, control-flow layer, and ORM
-Name: %{name}
-Version: %{version}
-Release: %{release}
-Source0: %{name}-%{version}.gem
-License: MIT
-Group: System/Servers
-Url: http://www.rubyonrails.org/
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildArch: noarch
-BuildRequires: ruby-RubyGems
-Requires: ruby-RubyGems
-Requires: ruby-activesupport
-Requires: ruby-activerecord
-Requires: ruby-actionpack
-Requires: ruby-actionmailer
-Requires: ruby-actionwebservice
-Requires: ruby-activeresource
-Requires: ruby-sqlite3
-Requires: ruby-rake
-
+Summary:	Web-application framework with template engine, control-flow layer, and ORM
+Name:		%{name}
+Version:	%{version}
+Release:	%{release}
+Source0:	%{name}-%{version}.gem
+License:	MIT
+Group:		System/Servers
+Url:		http://www.rubyonrails.org/
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildArch:	noarch
+BuildRequires:	ruby-RubyGems
+Requires:	ruby-RubyGems
+Requires:	ruby-activesupport = %{version}
+Requires:	ruby-activerecord = %{version}
+Requires:	ruby-actionpack = %{version}
+Requires:	ruby-actionmailer = %{version}
+Requires:	ruby-actionwebservice
+Requires:	ruby-activeresource = %{version}
+Requires:	ruby-sqlite3
+Requires:	ruby-rake >= 0.8.1
 
 %description
 Rails is a full-stack framework for developing database-backed web
@@ -48,9 +47,9 @@ install -d $RPM_BUILD_ROOT%{ruby_gemdir}
 gem install --ignore-dependencies --install-dir $RPM_BUILD_ROOT%{ruby_gemdir} %{SOURCE0}
 install -d $RPM_BUILD_ROOT%{_bindir}
 mv $RPM_BUILD_ROOT%{ruby_gemdir}/bin/* $RPM_BUILD_ROOT%{_bindir}
-rmdir $RPM_BUILD_ROOT%{ruby_gemdir}/bin
-rmdir $RPM_BUILD_ROOT%{ruby_gemdir}/doc/%{name}-%{version}
-rmdir $RPM_BUILD_ROOT%{ruby_gemdir}/doc
+rm -rf $RPM_BUILD_ROOT%{ruby_gemdir}/bin
+rm -rf  $RPM_BUILD_ROOT%{ruby_gemdir}/doc/%{name}-%{version}
+rm -rf $RPM_BUILD_ROOT%{ruby_gemdir}/doc
 
 for f in `find $RPM_BUILD_ROOT%{ruby_gemdir}/gems/%{name}-%{version} -type f`
 do
