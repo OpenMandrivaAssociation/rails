@@ -1,6 +1,6 @@
 %define name	rails
-%define version 2.1.2
-%define release %mkrel 2
+%define version 2.3.3
+%define release %mkrel 1
 
 Summary:	Web-application framework with template engine, control-flow layer, and ORM
 Name:		%{name}
