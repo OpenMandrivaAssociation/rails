@@ -1,7 +1,7 @@
 Summary:	Web-application framework with template engine, control-flow layer, and ORM
 Name:		rails
 Version:	3.2.1
-Release:	%mkrel 1
+Release:	%mkrel 2
 Source0:	http://rubygems.org/downloads/%{name}-%{version}.gem
 License:	MIT
 Group:		System/Servers
