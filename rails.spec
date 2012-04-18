@@ -1,12 +1,11 @@
 Summary:	Web-application framework with template engine, control-flow layer, and ORM
 Name:		rails
-Version:	3.2.1
-Release:	%mkrel 2
+Version:	3.2.3
+Release:	1
 Source0:	http://rubygems.org/downloads/%{name}-%{version}.gem
 License:	MIT
 Group:		System/Servers
 Url:		http://www.rubyonrails.org/
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch:	noarch
 BuildRequires:	ruby-RubyGems
 
@@ -24,17 +23,13 @@ and a web server.
 %build
 
 %install
-rm -rf $RPM_BUILD_ROOT
 
 gem install -E -n %{buildroot}%{_bindir} --no-ri --no-rdoc --local --install-dir %{buildroot}/%{ruby_gemdir} --force %{SOURCE0}
 
 rm -rf %{buildroot}%{ruby_gemdir}/cache
 
-%clean
-rm -rf $RPM_BUILD_ROOT
 
 %files
-%defattr(-,root,root)
 %{ruby_gemdir}/gems/%{name}-%{version}
 %{ruby_gemdir}/specifications/%{name}-%{version}.gemspec
 
