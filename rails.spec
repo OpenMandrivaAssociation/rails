@@ -1,6 +1,6 @@
 Summary:	Web-application framework with template engine, control-flow layer, and ORM
 Name:		rails
-Version:	3.2.3
+Version:	3.2.9
 Release:	1
 Source0:	http://rubygems.org/downloads/%{name}-%{version}.gem
 License:	MIT
@@ -32,4 +32,3 @@ rm -rf %{buildroot}%{ruby_gemdir}/cache
 %files
 %{ruby_gemdir}/gems/%{name}-%{version}
 %{ruby_gemdir}/specifications/%{name}-%{version}.gemspec
-
