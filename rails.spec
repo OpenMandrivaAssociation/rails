@@ -1,13 +1,13 @@
 Summary:	Web-application framework with template engine, control-flow layer, and ORM
 Name:		rails
-Version:	3.2.9
-Release:	2
+Version:	7.0.3
+Release:	1
 Source0:	http://rubygems.org/downloads/%{name}-%{version}.gem
 License:	MIT
 Group:		System/Servers
 Url:		http://www.rubyonrails.org/
 BuildArch:	noarch
-BuildRequires:	ruby-RubyGems
+BuildRequires:	ruby
 
 %description
 Rails is a full-stack framework for developing database-backed web
@@ -18,13 +18,13 @@ development environment. To go live, all you need to add is a database
 and a web server.
 
 %prep
-%setup -c
+%autosetup -p1 -c
 
 %build
 
 %install
 
-gem install -E -n %{buildroot}%{_bindir} --no-ri --no-rdoc --local --install-dir %{buildroot}/%{ruby_gemdir} --force %{SOURCE0}
+gem install -E -n %{buildroot}%{_bindir} --local --install-dir %{buildroot}/%{ruby_gemdir} --force %{SOURCE0}
 
 rm -rf %{buildroot}%{ruby_gemdir}/cache
 
@@ -32,3 +32,4 @@ rm -rf %{buildroot}%{ruby_gemdir}/cache
 %files
 %{ruby_gemdir}/gems/%{name}-%{version}
 %{ruby_gemdir}/specifications/%{name}-%{version}.gemspec
+%doc %{ruby_gemdir}/doc/%{name}-%{version}
