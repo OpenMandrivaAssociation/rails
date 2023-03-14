@@ -1,6 +1,6 @@
 Summary:	Web-application framework with template engine, control-flow layer, and ORM
 Name:		rails
-Version:	7.0.3
+Version:	7.0.4.3
 Release:	1
 Source0:	http://rubygems.org/downloads/%{name}-%{version}.gem
 License:	MIT
